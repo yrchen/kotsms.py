@@ -52,10 +52,10 @@ class kotsms:
             "-999989999" : "簡訊為空"
         }
         if(int(code) < 0):
-            msg = "[錯誤] %s : 點數剩餘 %d : %s" % (code, self.points, errorMsg[code])
+            msg = u"[錯誤] %s : 點數剩餘 %d : %s" % (code, self.points, errorMsg[code])
             print(msg)
             self.logger.error(msg)
         else:
-            msg = "[成功] %s : 點數剩餘 %d : 發送至 %s 傳送成功，簡訊長度為 %d 字, 內容為 : 「%s」 。" % (code, self.points, self.PHONE, self.smslen, self.SMS)
+            msg = u"[成功] %s : 點數剩餘 %d : 發送至 %s 傳送成功，簡訊長度為 %d 字, 內容為 : 「%s」 。" % (code, self.points, self.PHONE, self.smslen, self.SMS)
             print(msg)
             self.logger.info(msg)
